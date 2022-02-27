@@ -1,0 +1,7 @@
+<h1>Listagem das transações</h1>
+
+<div>
+   {% for transacao in transacoes %}
+      <p>{{transacao.descricao}} | {{transacao.valor}} | {{transacao.categoria}}</p>
+   {% endfor %}
+</div>
