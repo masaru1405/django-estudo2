@@ -1,0 +1,8 @@
+<div>
+   <form method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit">Salvar</button>
+   </form>
+   <a href="{% url 'welcome' %}">Home</a> | <a href="{% url 'listagem_categorias' %}">Categorias</a>
+</div>

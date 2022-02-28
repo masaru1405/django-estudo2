@@ -3,9 +3,10 @@
 <div>
    {% for transacao in transacoes %}
       <p>{{transacao.descricao}} | {{transacao.valor}} | {{transacao.categoria}} | {{transacao.data}}
-         | <a href="{% url 'update' transacao.id%}">Update</a>
+         |  <a href="{% url 'update' transacao.id%}">Update</a> |
+            <a href="{% url 'delete' transacao.id %}">Delete</a>
       </p>
    {% endfor %}
 </div>
 
-<a href="{% url 'welcome' %}">Home</a>
+<a href="{% url 'welcome' %}">Home</a> 

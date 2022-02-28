@@ -11,9 +11,12 @@
       <form method="POST">
          {% csrf_token %}
          {{form.as_p}}
-         <button type="submit">Salvar</button>
+         <button type="submit">Salvar</button> 
       </form>
-      <a href="{% url 'welcome' %}">Home</a> | <a href="{% url 'listagem' %}">Listagem</a>
+      <a href="{% url 'welcome' %}">Home</a> | <a href="{% url 'listagem' %}">Listagem</a> 
+      {% if id_para_deletar %}
+         | <a href="{% url 'delete' id_para_deletar.id %}">Delete</a>
+      {% endif %}
    </div>
 </body>
 </html>

@@ -1,0 +1,8 @@
+<h3>Categorias</h3>
+<ul>
+   {% for categoria in categorias %}
+      <li>{{ categoria.nome }}</li>
+   {% endfor %}
+</ul>
+
+<a href="{% url 'welcome' %}">Home</a> | <a href="{% url 'nova_categoria' %}">Nova categoria</a>
